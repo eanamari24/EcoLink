@@ -9,7 +9,7 @@
 </head>
 <style>
     body {
-      background-image: url("../Images/background.jpg");
+      background-image: url("Images/background.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       height: 100%;
@@ -18,7 +18,7 @@
 <body>
 
 <div class="logo">
-	<img src="../Images/logo.png" class="logo1">
+	<img src="Images/logo.png" class="logo1">
     <h1> coLink</h1>
 </div>
 
@@ -26,8 +26,8 @@
     <nav>
         <div class="nav-left">
             <ul>
-                <li><img src="../Images/notif.png" class="icon"></li>
-                <li><img src="../Images/inbox.png" class="icon"></li>
+                <li><img src="Images/notif.png" class="icon"></li>
+                <li><img src="Images/inbox.png" class="icon"></li>
                 
             </ul>   
 
@@ -35,17 +35,17 @@
         <div class="nav-right"></div>
 
             <div class="search-box">
-                <img src="../Images/search.png">
+                <img src="Images/search.png">
                 <input type="text" placeholder="Search">
 
             </div >
             <div class="nav-user-icon online dropdown">
-            <img src="../Images/profile.jpg" alt="User Profile Image">
+            <img src="Images/profile.jpg" alt="User Profile Image">
             <div class="dropdown-content">
         <ul>
             <li><a href="#">Option 1</a></li>
             <li><a href="#">Option 2</a></li>
-            <li><a href="../login/login.php">Log Out</a></li>
+            <li><a href="login.php">Log Out</a></li>
         </ul>
     </div>
 </div>

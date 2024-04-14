@@ -14,7 +14,7 @@ if (!isset($_SESSION)) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("../Images/background.jpg");
+            background-image: url("Images/background.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -24,7 +24,7 @@ if (!isset($_SESSION)) {
 <body class="flex justify-center items-center h-screen">
 <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
     <div class="flex justify-center mb-4">
-        <img src="../Images/logo.png" alt="Logo" class="h-12 w-12">
+        <img src="Images/logo.png" alt="Logo" class="h-12 w-12">
         <h1 class="text-3xl font-bold ml-2">coLink</h1>
     </div>
 

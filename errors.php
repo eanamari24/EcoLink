@@ -1,4 +1,5 @@
-<?php if (count($errors) > 0) : ?>
+<?php global $errors;
+if (count($errors) > 0) : ?>
     <div>
         <?php foreach ($errors as $error) : ?>
             <?php if (strpos($error, "Username already exists") !== false): ?>
