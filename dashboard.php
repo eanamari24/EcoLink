@@ -26,7 +26,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
                 <li><a href="#">Manage Users</a></li>
                 <li><a href="#">Manage Posts</a></li>
                 <li><a href="#">Settings</a></li>
-                <li><a href="login.php">Logout</a></li>
+                <li><a href="login/login.php">Logout</a></li>
             </ul>
         </nav>
     </header>
