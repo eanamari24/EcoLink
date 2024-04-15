@@ -38,7 +38,7 @@ if (isset($_POST['reg_user'])) {
   if ($password_1 != $password_2) { $errors[] = "The two passwords do not match"; }
 
 
-  if ($role == 'admin') {
+  if ($role === 'admin') {
     // Check if the maximum admin limit has been reached
     if ($current_admin_count >= $max_admins) {
         $errors[] = "Maximum number of admin users reached";
@@ -66,7 +66,7 @@ $stmt->store_result();
 $stmt->close();
 
 // Register user if there are no errors in the form
-if (count($errors) == 0) {
+if (count($errors) === 0) {
   $password = md5($password_1); // encrypt the password before saving in the database
   $query = "INSERT INTO users (username, email, password, role) VALUES('$username', '$email', '$password', '$role')";
   mysqli_query($db, $query);
@@ -90,18 +90,18 @@ if (isset($_POST['login_user'])) {
       $errors[] = "Password is required";
   }
 
-  if (count($errors) == 0) {
+  if (count($errors) === 0) {
       $password = md5($password);
       $query = "SELECT * FROM users WHERE username='$username' AND password='$password' AND role='$role'";
       $results = mysqli_query($db, $query);
 
-      if (mysqli_num_rows($results) == 1) {
+      if (mysqli_num_rows($results) === 1) {
           $_SESSION['username'] = $username;
           $_SESSION['role'] = $role; // Store role in session
 
-          header('location: dashboard.php');
+          header('location: ../userView/dashboard.php');
       } else {
-          array_push($errors, "Wrong username/password combination or invalid role");
+          $errors[] = "Wrong username/password combination or invalid role";
       }
   }
 }
@@ -110,6 +110,8 @@ if (isset($_POST['login_user'])) {
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: login.php");
+    header("location: ../login/login.php"); // Use relative path
+    exit(); // Ensure the script terminates after the redirect
 }
+
 
