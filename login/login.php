@@ -25,7 +25,7 @@ unset($_SESSION['success']);
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("../Images/background.jpg");
+            background-image: url("../assets/background.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -36,7 +36,7 @@ unset($_SESSION['success']);
 
 <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
     <div class="flex justify-center mb-6">
-        <img src="../Images/logo.png" alt="Logo" class="h-12 w-12">
+        <img src="../assets/logo.png" alt="Logo" class="h-12 w-12">
         <h1 class="text-3xl font-bold ml-2">coLink</h1>
     </div>
 
