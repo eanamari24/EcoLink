@@ -1,5 +1,5 @@
 <?php
-include('server.php');
+include('../server/server.php');
 
 // Start the session if not already started
 if (!isset($_SESSION)) {
@@ -25,7 +25,7 @@ unset($_SESSION['success']);
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("Images/background.jpg");
+            background-image: url("../Images/background.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -36,7 +36,7 @@ unset($_SESSION['success']);
 
 <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
     <div class="flex justify-center mb-6">
-        <img src="Images/logo.png" alt="Logo" class="h-12 w-12">
+        <img src="../Images/logo.png" alt="Logo" class="h-12 w-12">
         <h1 class="text-3xl font-bold ml-2">coLink</h1>
     </div>
 
@@ -45,7 +45,7 @@ unset($_SESSION['success']);
     </div>
 
     <form method="post" action="login.php">
-        <?php include('errors.php'); ?>
+        <?php include('../error/errors.php'); ?>
         <!-- Display success message from registration -->
         <?php if (!empty($success)) : ?>
             <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4" role="alert">
@@ -78,12 +78,12 @@ unset($_SESSION['success']);
             <button type="submit" name="login_user" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
         </div>
         <div class="mt-4 text-center">
-            <p class="text-sm">Not yet a member? <a href="register.php" class="text-indigo-600 hover:text-indigo-900">Sign up</a></p>
+            <p class="text-sm">Not yet a member? <a href="../login/register.php" class="text-indigo-600 hover:text-indigo-900">Sign up</a></p>
         </div>
     </form>
 </div>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 
 </body>
 </html>

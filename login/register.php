@@ -1,5 +1,5 @@
 <?php
-include('server.php');
+include('../server/server.php');
 // Ensure session is started
 if (!isset($_SESSION)) {
     session_start();
@@ -15,7 +15,7 @@ if (!isset($_SESSION)) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("Images/background.jpg");
+            background-image: url("../Images/background.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -25,14 +25,14 @@ if (!isset($_SESSION)) {
 <body class="flex justify-center items-center h-screen">
 <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
     <div class="flex justify-center mb-4">
-        <img src="Images/logo.png" alt="Logo" class="h-12 w-12">
+        <img src="../Images/logo.png" alt="Logo" class="h-12 w-12">
         <h1 class="text-3xl font-bold ml-2">coLink</h1>
     </div>
 
     <h2 class="text-xl text-center text-gray-800 font-bold mb-6">Register Here!</h2>
 
     <form method="post" action="register.php" class="space-y-4">
-        <?php include('errors.php'); ?>
+        <?php include('../error/errors.php'); ?>
 
         <div>
             <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
@@ -70,7 +70,7 @@ if (!isset($_SESSION)) {
         </div>
 
         <p class="text-center text-sm text-gray-600">
-            Already a member? <a href="login.php" class="text-indigo-600 hover:text-indigo-900">Sign in</a>
+            Already a member? <a href="../login/login.php" class="text-indigo-600 hover:text-indigo-900">Sign in</a>
         </p>
     </form>
 </div>
